@@ -113,3 +113,20 @@ function makeHashTag(str) {
 }
 
 console.log(makeHashTag('go for it'))
+
+function isEmpty(str) {
+  if (str.match(/[a-z]/i)) {
+    return false
+  } else if (str.match(/[A-Z]/i)) {
+    return false
+  } else if (str.match(/[0-9]/i)) {
+    return false
+  }
+  return true
+}
+
+console.log(isEmpty(''))
+console.log(isEmpty('\n'))
+console.log(isEmpty('\t'))
+console.log(isEmpty('\r'))
+console.log(isEmpty('hello 123'))
