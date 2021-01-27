@@ -5,14 +5,23 @@ function capitalizeFirst(str) {
   return newStr
 }
 
-console.log(capitalizeFirst('hello'))
+String.prototype.capitalizeFirst = function() {
+  return capitalizeFirst(this)
+}
 
+console.log(capitalizeFirst('hello'))
+console.log('hello there'.capitalizeFirst())
 
 function allCaps(str) {
   return str.toUpperCase()
 }
 
+String.prototype.allCaps = function() {
+  return allCaps(this)
+}
+
 console.log(allCaps('hello'))
+console.log('hello there'.allCaps())
 
 
 function capitalizeWords(str) {
@@ -24,7 +33,15 @@ function capitalizeWords(str) {
   return newStr
 }
 
+
+String.prototype.capitalizeWords = function() {
+  return capitalizeWords(this)
+}
+
+
 console.log(capitalizeWords('we do all things right'))
+console.log('In this world we do all things right'.capitalizeWords())
+
 
 function capitalizeHeadLine(str) {
   const prop = new Set(['the', 'in', 'a', 'an', 'and', 'but', 'for', 'at', 'by', 'from'])
@@ -42,8 +59,12 @@ function capitalizeHeadLine(str) {
   return newStr
 }
 
-console.log(capitalizeHeadLine('we do all things in the name of god by the will of people'))
+String.prototype.capitalizeHeadLine = function() {
+  return capitalizeHeadLine(this)
+}
 
+console.log(capitalizeHeadLine('we do all things in the name of god by the will of people'))
+console.log('In this world we do all things right'.capitalizeHeadLine())
 
 function removeExtraSpace(str){
   const strTri = str.trim()
@@ -60,7 +81,14 @@ function removeExtraSpace(str){
 
 }
 
+String.prototype.removeExtraSpace = function() {
+  return removeExtraSpace(this)
+}
+
 console.log(removeExtraSpace("   Hello    world!   "))
+console.log("   Hello    world!   ".removeExtraSpace())
+
+
 
 
 function kebobCase(str) {
@@ -69,7 +97,13 @@ function kebobCase(str) {
   return strList.join('-')
 }
 
+String.prototype.kebobCase = function() {
+  return kebobCase(this)
+}
+
 console.log(kebobCase(" Hello world "))
+console.log(" Hello world ".kebobCase())
+
 
 function snakeCase(str) {
   const strTri = str.trim()
@@ -77,7 +111,12 @@ function snakeCase(str) {
   return strList.join('_')
 }
 
+String.prototype.snakeCase = function() {
+  return snakeCase(this)
+}
+
 console.log(snakeCase(" what the heck "))
+console.log(" what the heck ".snakeCase())
 
 
 function camelCase(str) {
@@ -94,7 +133,12 @@ function camelCase(str) {
   return newStr
 }
 
+String.prototype.camelCase = function() {
+  return camelCase(this)
+}
+
 console.log(camelCase('Camel Case'))
+console.log('Camel Case'.camelCase())
 
 
 function shift(str, num) {
@@ -102,7 +146,14 @@ function shift(str, num) {
   return newStr
 }
 
+String.prototype.shift = function() {
+  return shift(this)
+}
+
+
+
 console.log(shift('hello world', 2))
+console.log('Camel Case'.shift())
 
 
 function makeHashTag(str) {
@@ -112,7 +163,12 @@ function makeHashTag(str) {
   return '#' + strList.join('')
 }
 
+String.prototype.makeHashTag = function() {
+  return makeHashTag(this)
+}
+
 console.log(makeHashTag('go for it'))
+console.log('go for it'.makeHashTag())
 
 function isEmpty(str) {
   if (str.match(/[a-z]/i)) {
@@ -125,8 +181,13 @@ function isEmpty(str) {
   return true
 }
 
+String.prototype.isEmpty = function() {
+  return isEmpty(this)
+}
+
 console.log(isEmpty(''))
 console.log(isEmpty('\n'))
 console.log(isEmpty('\t'))
 console.log(isEmpty('\r'))
 console.log(isEmpty('hello 123'))
+console.log('hello 123'.isEmpty())

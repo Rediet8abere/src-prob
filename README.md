@@ -1,3 +1,17 @@
 # String Lib
 
-[Sample](https://img.shields.io/badge/Str-Str--Manu-green)
+
+
+This library contains methods like:
+        - capitalizeFirst
+        - allCaps
+        - capitalizeWords
+        - capitalizeWords
+        - capitalizeHeadLine
+        - removeExtraSpace
+        - kebobCase
+        - snakeCase
+        - camelCase
+        - shift
+        - makeHashTag
+        - isEmpty
