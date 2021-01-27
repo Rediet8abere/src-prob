@@ -2,7 +2,7 @@
 
 
 
-This library contains methods like:
+### This library contains methods like:
         - capitalizeFirst
         - allCaps
         - capitalizeWords
