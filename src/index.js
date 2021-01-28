@@ -30,7 +30,7 @@ function capitalizeWords(str) {
   for (let i=0; i < strList.length; i++) {
     newStr += capitalizeFirst(strList[i]) + ' '
   }
-  return newStr
+  return newStr.trim()
 }
 
 
@@ -56,7 +56,7 @@ function capitalizeHeadLine(str) {
     }
 
   }
-  return newStr
+  return newStr.trim()
 }
 
 String.prototype.capitalizeHeadLine = function() {
@@ -77,7 +77,7 @@ function removeExtraSpace(str){
       newStr += strList[i]
     }
   }
-  return newStr
+  return newStr.trim()
 
 }
 
@@ -127,7 +127,7 @@ function camelCase(str) {
     if (i==0) {
       newStr += strList[i].toLowerCase()
     } else {
-      newStr += capitalizeFirst(strList[0])
+      newStr += capitalizeFirst(strList[i])
     }
   }
   return newStr
@@ -138,7 +138,7 @@ String.prototype.camelCase = function() {
 }
 
 console.log(camelCase('Camel Case'))
-console.log('Camel Case'.camelCase())
+console.log('what the heck'.camelCase())
 
 
 function shift(str, num) {
@@ -191,3 +191,17 @@ console.log(isEmpty('\t'))
 console.log(isEmpty('\r'))
 console.log(isEmpty('hello 123'))
 console.log('hello 123'.isEmpty())
+
+
+
+module.exports.capitalizeFirst = capitalizeFirst
+module.exports.allCaps = allCaps
+module.exports.capitalizeWords = capitalizeWords
+module.exports.capitalizeHeadLine = capitalizeHeadLine
+module.exports.removeExtraSpace = removeExtraSpace
+module.exports.kebobCase = kebobCase
+module.exports.snakeCase = snakeCase
+module.exports.camelCase = camelCase
+module.exports.shift = shift
+module.exports.makeHashTag = makeHashTag
+module.exports.isEmpty = isEmpty
