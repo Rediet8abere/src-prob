@@ -194,14 +194,29 @@ console.log('hello 123'.isEmpty())
 
 
 
-module.exports.capitalizeFirst = capitalizeFirst
-module.exports.allCaps = allCaps
-module.exports.capitalizeWords = capitalizeWords
-module.exports.capitalizeHeadLine = capitalizeHeadLine
-module.exports.removeExtraSpace = removeExtraSpace
-module.exports.kebobCase = kebobCase
-module.exports.snakeCase = snakeCase
-module.exports.camelCase = camelCase
-module.exports.shift = shift
-module.exports.makeHashTag = makeHashTag
-module.exports.isEmpty = isEmpty
+// module.exports.capitalizeFirst = capitalizeFirst
+// module.exports.allCaps = allCaps
+// module.exports.capitalizeWords = capitalizeWords
+// module.exports.capitalizeHeadLine = capitalizeHeadLine
+// module.exports.removeExtraSpace = removeExtraSpace
+// module.exports.kebobCase = kebobCase
+// module.exports.snakeCase = snakeCase
+// module.exports.camelCase = camelCase
+// module.exports.shift = shift
+// module.exports.makeHashTag = makeHashTag
+// module.exports.isEmpty = isEmpty
+
+export {
+        capitalizeFirst, 
+        allCaps, 
+        capitalizeWords, 
+        capitalizeHeadLine,
+        removeExtraSpace,
+        kebobCase,
+        snakeCase,
+        camelCase,
+        shift,
+        makeHashTag,
+        isEmpty
+      }
+

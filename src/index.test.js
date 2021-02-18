@@ -1,4 +1,5 @@
-const lib = require('./index')
+const lib = require('../umd/str-prob')
+
 
 test('Testing Str-Lib', () => {
   expect(lib.capitalizeFirst('hello')).toBe('Hello')
